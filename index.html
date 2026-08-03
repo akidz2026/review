@@ -4,12 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A-Kidz Review Center — Science High School Specialists</title>
-<meta name="description" content="A-Kidz Review Center & Tutorial Center — prepare your child for the Unified Science High School Admissions Test (USHAT). Enroll online.">
+<meta name="description" content="A-Kidz Review Center & Tutorial Center — prepare your child for the Unified Science High School Admissions Test (USHAT). Enroll online. Face-to-face or virtual classes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,600&display=swap" rel="stylesheet">
 <style>
   :root{
     --blue:#102cae; --blue-d:#0b1f80; --orange:#f7941d; --orange-d:#e07d05;
     --ink:#16183a; --muted:#5b5f7a; --bg:#f4f6fc; --card:#ffffff; --line:#e6e9f5;
-    --ok:#1e8449;
+    --ok:#1e8449; --display:'Fraunces',Georgia,'Times New Roman',serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
@@ -39,15 +42,18 @@
   .hero{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-d) 100%);color:#fff;position:relative;overflow:hidden}
   .hero:after{content:"";position:absolute;right:-140px;top:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(247,148,29,.35),transparent 62%);border-radius:50%}
   .hero .wrap{padding:70px 22px 84px;position:relative;z-index:2}
-  .hero h1{font-size:48px;font-weight:800;margin:14px 0 16px;max-width:760px}
-  .hero h1 span{color:var(--orange)}
+  .hero h1{font-family:var(--display);font-size:50px;font-weight:900;line-height:1.06;letter-spacing:-1px;margin:8px 0 6px;max-width:860px}
+  .hero h1 .hl{color:var(--orange)}
+  .hero .shot{font-family:var(--display);font-style:italic;font-weight:600;font-size:29px;color:#cfd6ff;margin:2px 0 16px}
+  .hero .shot span{color:var(--orange);font-style:normal;font-weight:700}
   .hero p.lead{font-size:19px;color:#e7ebff;max-width:620px;margin-bottom:14px}
   .hero .tag{font-style:italic;color:#c8d0ff;margin-bottom:28px}
+  .sec-head h2,.prog h2{font-family:var(--display);font-weight:700}
   .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
   .badges{display:flex;gap:26px;flex-wrap:wrap;margin-top:40px}
   .badge b{display:block;font-size:26px;color:var(--orange);font-weight:800}
   .badge span{font-size:14px;color:#d7ddff}
-  @media(max-width:640px){.hero h1{font-size:34px}}
+  @media(max-width:640px){.hero h1{font-size:36px}.hero .shot{font-size:22px}}
 
   section{padding:64px 0}
   .sec-head{text-align:center;max-width:680px;margin:0 auto 44px}
@@ -87,6 +93,8 @@
   .price .req{color:var(--muted);font-size:14px;margin:10px 0 18px;flex:1}
   .price .btn{width:100%;text-align:center}
   .note{background:#fff7ec;border:1px solid #ffe1b8;color:#8a5b12;border-radius:12px;padding:14px 16px;font-size:14px;margin-top:22px;text-align:center}
+  .vbanner{margin-top:22px;background:linear-gradient(135deg,var(--blue),var(--blue-d));color:#fff;border-radius:18px;padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+  .vbanner h3{color:#fff}
 
   /* ENROLL */
   #enroll{background:#fff;border-top:1px solid var(--line)}
@@ -154,9 +162,10 @@
 
 <header class="hero" id="top">
   <div class="wrap">
-    <div class="eyebrow">Science High School Specialists</div>
-    <h1>Take your best shot at the <span>USHAT.</span></h1>
-    <p class="lead">A‑Kidz Review Center &amp; Tutorial Center prepares Grade&nbsp;6 pupils to ace the Unified Science High School Admissions Test — powered by fresh minds from the country's premier universities.</p>
+    <div class="eyebrow">A‑Kidz Review Center &amp; Tutorial Center</div>
+    <h1>We are your <span class="hl">Science High School Specialists.</span></h1>
+    <p class="shot">Take your best shot at the <span>USHAT.</span></p>
+    <p class="lead">We prepare Grade&nbsp;6 pupils to ace the Unified Science High School Admissions Test — powered by fresh minds from the country's premier universities. Join us face‑to‑face or in our live virtual classroom.</p>
     <p class="tag">"Everything you need to learn, from A to Z."</p>
     <div class="cta">
       <a href="#enroll" class="btn">Enroll your child</a>
@@ -165,6 +174,7 @@
     <div class="badges">
       <div class="badge"><b>4</b><span>Core subjects</span></div>
       <div class="badge"><b>10</b><span>Saturday sessions</span></div>
+      <div class="badge"><b>F2F + Online</b><span>Choose your setup</span></div>
       <div class="badge"><b>₱8,000</b><span>Opening promo</span></div>
     </div>
   </div>
@@ -197,9 +207,11 @@
         <ul>
           <li><b>Schedule:</b> 10 Saturdays, October 3 – December 5, 2026</li>
           <li><b>Daily hours:</b> 8:00 AM – 5:00 PM</li>
+          <li><b>Choose your setup:</b> Face-to-face on-campus, or Live Online (virtual classroom)</li>
           <li><b>Format:</b> Diagnostic exam, 8 review sessions, and a final mock test</li>
           <li><b>Materials:</b> Reference manual + weekly practice exams included</li>
         </ul>
+        <p style="background:#eef1ff;border:1px solid #d7ddff;border-radius:12px;padding:12px 15px;font-size:14px;color:var(--blue-d);margin-top:6px">📍 <b>Face-to-face venue:</b> St. Gertrude School of Novaliches — 14 Sagittarius St., Barangay Talipapa, Novaliches, Quezon City.&nbsp; 💻 <b>Prefer to stay home?</b> Join the same program in our live virtual classroom.</p>
       </div>
       <div class="panel">
         <h3>Four subjects, every Saturday</h3>
@@ -210,6 +222,7 @@
           <div>🔬 Science</div>
           <div>🧩 Abstract Reasoning</div>
         </div>
+        <div style="margin-top:16px;font-size:14px;color:#d7ddff">🏫 On-campus &nbsp;•&nbsp; 💻 Live online — <b style="color:#fff">you choose.</b></div>
       </div>
     </div>
   </div>
@@ -221,7 +234,7 @@
     <div class="sec-head">
       <div class="eyebrow">Promos &amp; Bundles</div>
       <h2>Opening rates for our first batch</h2>
-      <p>Suggested rate is ₱9,000 — but every enrollee saves during our opening promo. Bigger discounts apply with proof.</p>
+      <p>Face-to-face suggested rate is ₱9,000 — but every enrollee saves during our opening promo, and bigger discounts apply with proof. Prefer to study from home? Take the same program online for a flat ₱6,000.</p>
     </div>
     <div class="prices">
       <div class="price pop">
@@ -248,6 +261,14 @@
       </div>
     </div>
     <div class="note">⚠️ The Honor Student and Partner School discounts <b>cannot be combined</b> — you may choose only one 20%‑off discount.</div>
+    <div class="vbanner">
+      <div>
+        <div style="font-weight:800;letter-spacing:1px;text-transform:uppercase;font-size:12px;color:#ffe1b8">Prefer to study from home?</div>
+        <h3 style="font-family:var(--display);font-size:26px;margin:4px 0 6px">Virtual Classroom — flat ₱6,000</h3>
+        <p style="margin:0;color:#eef1ff;font-size:15px;max-width:560px">Same instructors, same 4 subjects, same materials — reviewed <b>live online</b>. Lower price, same quality. No commute, join from anywhere in the Philippines.</p>
+      </div>
+      <a href="#enroll" class="btn" style="white-space:nowrap">Enroll online</a>
+    </div>
   </div>
 </section>
 
@@ -271,23 +292,58 @@
 
       <h3 style="color:var(--blue);margin-bottom:14px">1. Student Information</h3>
       <div class="frow">
-        <div class="field"><label>Student's full name <span class="rq">*</span></label><input name="student_name" required></div>
-        <div class="field"><label>Current grade level <span class="rq">*</span></label>
-          <select name="grade_level" required><option value="">Select…</option><option>Grade 6</option><option>Grade 5</option><option>Other</option></select></div>
+        <div class="field"><label>First name <span class="rq">*</span></label><input name="first_name" required></div>
+        <div class="field"><label>Surname <span class="rq">*</span></label><input name="surname" required></div>
       </div>
       <div class="frow">
-        <div class="field"><label>Current school <span class="rq">*</span></label><input name="current_school" required></div>
-        <div class="field"><label>Gender</label><select name="gender"><option value="">Prefer not to say</option><option>Female</option><option>Male</option></select></div>
+        <div class="field"><label>Middle name</label><input name="middle_name"></div>
+        <div class="field"><label>Extension <small style="font-weight:500;color:var(--muted)">— Jr., III (if any)</small></label><input name="extension"></div>
       </div>
+      <div class="frow">
+        <div class="field"><label>Sex <span class="rq">*</span></label><select name="sex" required><option value="">Select…</option><option>Male</option><option>Female</option><option>Prefer not to say</option></select></div>
+        <div class="field"><label>Current grade level <span class="rq">*</span></label><select name="grade_level" required><option value="">Select…</option><option>Grade 6</option><option>Grade 5</option><option>Other</option></select></div>
+      </div>
+      <div class="field"><label>Current school <span class="rq">*</span></label><input name="current_school" required></div>
 
-      <h3 style="color:var(--blue);margin:22px 0 14px">2. Parent / Guardian</h3>
+      <h3 style="color:var(--blue);margin:22px 0 14px">2. Home Address</h3>
+      <div class="field"><label>Address line 1 <span class="rq">*</span> <small style="font-weight:500;color:var(--muted)">— house / unit no., street</small></label><input name="address1" required></div>
+      <div class="field"><label>Address line 2 <small style="font-weight:500;color:var(--muted)">— subdivision / building (optional)</small></label><input name="address2"></div>
+      <div class="frow">
+        <div class="field"><label>Barangay <span class="rq">*</span></label><input name="barangay" required></div>
+        <div class="field"><label>City / Municipality <span class="rq">*</span></label><input name="city" required></div>
+      </div>
+      <div class="field"><label>Region <span class="rq">*</span></label><input name="region" required placeholder="e.g., NCR"></div>
+
+      <h3 style="color:var(--blue);margin:22px 0 14px">3. Parent / Guardian</h3>
       <div class="frow">
         <div class="field"><label>Parent / guardian name <span class="rq">*</span></label><input name="parent_name" required></div>
         <div class="field"><label>Mobile number <span class="rq">*</span></label><input name="mobile" type="tel" placeholder="09XXXXXXXXX" required></div>
       </div>
-      <div class="field"><label>Email address <span class="rq">*</span> <small style="font-weight:500;color:var(--muted)">— this is where we'll send your amount to pay</small></label><input name="email" type="email" required></div>
+      <div class="field"><label>Preferred email address <span class="rq">*</span> <small style="font-weight:500;color:var(--muted)">— where we'll send your amount to pay</small></label><input name="email" type="email" required></div>
 
-      <h3 style="color:var(--blue);margin:22px 0 14px">3. Choose Your Rate</h3>
+      <h3 style="color:var(--blue);margin:22px 0 14px">4. Review Setup</h3>
+      <div class="field" id="modeWrap">
+        <label class="opt sel" data-mode="Face-to-Face">
+          <input type="radio" name="review_mode" value="Face-to-Face" checked>
+          <span class="t">🏫 Face-to-Face <small>On-campus Saturday sessions</small></span>
+          <span class="p">from ₱7,200</span>
+        </label>
+        <div style="height:12px"></div>
+        <label class="opt" data-mode="Online">
+          <input type="radio" name="review_mode" value="Online">
+          <span class="t">💻 Online — Virtual Classroom <small>Same program, lower price — join from home</small></span>
+          <span class="p">₱6,000</span>
+        </label>
+      </div>
+      <div class="cond" id="condF2F">
+        <p style="margin:0">📍 <b>Venue:</b> St. Gertrude School of Novaliches — 14 Sagittarius St., Barangay Talipapa, Novaliches, Quezon City.</p>
+      </div>
+      <div class="cond" id="condOnline">
+        <p style="margin:0">💻 <b>Live online — a lower-priced alternative.</b> Same instructors, same 4 subjects, same materials, reviewed live via video platform. Flat all-in rate of <b style="color:var(--blue)">₱6,000</b> — no commute, join from anywhere.</p>
+      </div>
+
+      <div id="rateSection">
+      <h3 style="color:var(--blue);margin:22px 0 14px">5. Choose Your Rate <small style="font-weight:500;color:var(--muted)">(face-to-face)</small></h3>
       <div class="field" id="optWrap">
         <label class="opt sel" data-fee="8000" data-label="Opening Promo">
           <input type="radio" name="discount" value="Opening Promo" checked>
@@ -318,6 +374,7 @@
         <div class="field"><label>Name of partner school <span class="rq">*</span></label><input name="partner_school" placeholder="e.g., St. Gertrude School of Novaliches"></div>
         <p style="margin-bottom:10px"><b>📎 One more step for your Partner School discount:</b> after you submit, email a photo of your school ID or proof of enrollment to <b style="color:var(--blue)">review@akidz.online</b>. Partner-school eligibility is confirmed upon review.</p>
         <label class="ack"><input type="checkbox" id="ackPartner"> I understand I'll email my school ID / proof to confirm this 20% discount.</label>
+      </div>
       </div>
 
       <div class="feebox">
@@ -366,6 +423,7 @@
     <h3>Application received!</h3>
     <p>Thank you, <b id="cName">parent</b>. We've received <b id="cStudent">your child's</b> enrollment application.</p>
     <div class="sum">
+      <div><span>Review setup</span><b id="cMode">Face-to-Face</b></div>
       <div><span>Selected rate</span><b id="cDiscount">Opening Promo</b></div>
       <div><span>Estimated amount to pay</span><b id="cAmount">₱8,000</b></div>
     </div>
@@ -377,29 +435,29 @@
 
 <script>
 (function(){
-  /* ====================== GOOGLE FORM SETUP ======================
-     1. Create a Google Form with these questions (short answer / paragraph):
-        Student name, Grade level, Current school, Gender, Parent name,
-        Mobile, Email, Discount chosen, Amount, Partner school, Message.
-     2. Click the 3-dots -> "Get pre-filled link", fill dummy values, copy link.
-        Each field shows as entry.1234567 — paste those IDs below.
-     3. Replace FORM_ID in GFORM_ACTION with your form's ID (from its edit URL:
-        docs.google.com/forms/d/e/FORM_ID/viewform).
-     Responses land in your linked Google Sheet automatically. Proof photos
-     come in by email to review@akidz.online (see the discount steps on-page). */
-  var GFORM_ACTION="https://docs.google.com/forms/d/e/FORM_ID/formResponse";
-  var ENTRY={
-    student_name:  "entry.1000001",
-    grade_level:   "entry.1000002",
-    current_school:"entry.1000003",
-    gender:        "entry.1000004",
-    parent_name:   "entry.1000005",
-    mobile:        "entry.1000006",
-    email:         "entry.1000007",
-    discount:      "entry.1000008",
-    amount:        "entry.1000009",
-    partner_school:"entry.1000010",
-    message:       "entry.1000011"
+  /* ====================== GOOGLE FORM SETUP ====================== */
+  var GFORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSeML4gllThOqiwkrFLfTgyLj5dQQau6vRTtWesa2NrA0l1W-A/formResponse";
+  var ENTRY = {
+    first_name:     "entry.1264081446",
+    surname:        "entry.176494389",
+    middle_name:    "entry.315710421",
+    extension:      "entry.1941653317",
+    sex:            "entry.638116234",
+    grade_level:    "entry.65789517",
+    current_school: "entry.1048186449",
+    address1:       "entry.421299404",
+    address2:       "entry.833973868",
+    barangay:       "entry.1553055752",
+    city:           "entry.445505426",
+    region:         "entry.1687466580",
+    parent_name:    "entry.2061709792",
+    mobile:         "entry.969640622",
+    email:          "entry.2053932341",
+    review_mode:    "entry.2065302904",
+    discount:       "entry.352017318",
+    partner_school: "entry.737868979",
+    amount:         "entry.1450940552", 
+    message:        "entry.1451614822"                 
   };
   /* ============================================================== */
 
@@ -413,18 +471,38 @@
   var peso=function(n){return '₱'+Number(n).toLocaleString('en-PH');};
 
   function refresh(){
+    var mode=(document.querySelector('input[name=review_mode]:checked')||{}).value||'Face-to-Face';
     var checked=document.querySelector('input[name=discount]:checked');
     var val=checked?checked.value:'Opening Promo';
     opts.forEach(function(o){o.classList.toggle('sel', o.querySelector('input').checked);});
-    var fee = val==='Opening Promo' ? 8000 : 7200;
-    feeDisplay.textContent=peso(fee); feeLabel.textContent=val;
-    feeAmount.value=fee; discLabel.value=val;
-    condHonor.classList.toggle('show', val==='Honor Student');
-    condPartner.classList.toggle('show', val==='Partner School');
+    var fee,label;
+    if(mode==='Online'){ fee=6000; label='Online (Virtual)'; }
+    else { fee = val==='Opening Promo' ? 8000 : 7200; label=val; }
+    feeDisplay.textContent=peso(fee); feeLabel.textContent=label;
+    feeAmount.value=fee; discLabel.value=label;
+    condHonor.classList.toggle('show', mode==='Face-to-Face' && val==='Honor Student');
+    condPartner.classList.toggle('show', mode==='Face-to-Face' && val==='Partner School');
   }
   opts.forEach(function(o){o.addEventListener('click',function(){o.querySelector('input').checked=true;refresh();});});
   document.querySelectorAll('input[name=discount]').forEach(function(r){r.addEventListener('change',refresh);});
   refresh();
+
+  // review setup (face-to-face / online)
+  var modeOpts=document.querySelectorAll('#modeWrap .opt');
+  var condF2F=document.getElementById('condF2F');
+  var condOnline=document.getElementById('condOnline');
+  function refreshMode(){
+    var m=document.querySelector('input[name=review_mode]:checked');
+    var mv=m?m.value:'Face-to-Face';
+    modeOpts.forEach(function(o){o.classList.toggle('sel',o.querySelector('input').checked);});
+    condF2F.classList.toggle('show', mv==='Face-to-Face');
+    condOnline.classList.toggle('show', mv==='Online');
+    document.getElementById('rateSection').style.display = (mv==='Online') ? 'none' : '';
+    refresh();
+  }
+  modeOpts.forEach(function(o){o.addEventListener('click',function(){o.querySelector('input').checked=true;refreshMode();});});
+  document.querySelectorAll('input[name=review_mode]').forEach(function(r){r.addEventListener('change',refreshMode);});
+  refreshMode();
 
   var form=document.getElementById('enrollForm');
   var errEl=document.getElementById('formErr');
@@ -432,32 +510,38 @@
     e.preventDefault();
     errEl.style.display='none';
     if(!form.checkValidity()){ form.reportValidity(); return; }
+    var mode=(document.querySelector('input[name=review_mode]:checked')||{}).value||'Face-to-Face';
     var val=document.querySelector('input[name=discount]:checked').value;
-    // conditional acknowledgment validation
-    if(val==='Honor Student' && !document.getElementById('ackHonor').checked){
-      errEl.textContent='Please tick the box confirming you will email your Grade 5 report card.'; errEl.style.display='block'; condHonor.scrollIntoView({behavior:'smooth'}); return;
-    }
-    if(val==='Partner School'){
-      if(!form.partner_school.value.trim() || !document.getElementById('ackPartner').checked){
+    var fee, rateLabel;
+    if(mode==='Online'){ fee=6000; rateLabel='Online (Virtual) — ₱6,000'; }
+    else {
+      // conditional acknowledgment validation (face-to-face only)
+      if(val==='Honor Student' && !document.getElementById('ackHonor').checked){
+        errEl.textContent='Please tick the box confirming you will email your Grade 5 report card.'; errEl.style.display='block'; condHonor.scrollIntoView({behavior:'smooth'}); return;
+      }
+      if(val==='Partner School' && (!form.partner_school.value.trim() || !document.getElementById('ackPartner').checked)){
         errEl.textContent='Please enter your partner school and tick the box confirming you will email your proof.'; errEl.style.display='block'; condPartner.scrollIntoView({behavior:'smooth'}); return;
       }
+      fee = val==='Opening Promo' ? 8000 : 7200; rateLabel=val;
     }
-    var fee = val==='Opening Promo' ? 8000 : 7200;
     // fill confirmation
     document.getElementById('cName').textContent=form.parent_name.value||'parent';
-    document.getElementById('cStudent').textContent=form.student_name.value||'your child';
-    document.getElementById('cDiscount').textContent=val;
+    document.getElementById('cStudent').textContent=(form.first_name.value+' '+form.surname.value).trim()||'your child';
+    document.getElementById('cMode').textContent=mode;
+    document.getElementById('cDiscount').textContent=rateLabel;
     document.getElementById('cAmount').textContent=peso(fee);
     document.getElementById('cEmail').textContent=form.email.value||'your email';
-    var needProof=(val!=='Opening Promo');
+    var needProof=(mode==='Face-to-Face' && val!=='Opening Promo');
     document.getElementById('proofNote').style.display = needProof ? 'block' : 'none';
     // build Google Form submission (keeps this custom design)
     var g=new URLSearchParams();
-    var vals={student_name:form.student_name.value, grade_level:form.grade_level.value,
-      current_school:form.current_school.value, gender:form.gender.value,
+    var vals={first_name:form.first_name.value, surname:form.surname.value, middle_name:form.middle_name.value,
+      extension:form.extension.value, sex:form.sex.value, grade_level:form.grade_level.value,
+      current_school:form.current_school.value, address1:form.address1.value, address2:form.address2.value,
+      barangay:form.barangay.value, city:form.city.value, region:form.region.value,
       parent_name:form.parent_name.value, mobile:form.mobile.value, email:form.email.value,
-      discount:val, amount:String(fee),
-      partner_school:(val==='Partner School'?form.partner_school.value:''), message:form.message.value};
+      review_mode:mode, discount:(mode==='Online'?'Online (Virtual)':val), amount:String(fee),
+      partner_school:(mode==='Face-to-Face'&&val==='Partner School'?form.partner_school.value:''), message:form.message.value};
     Object.keys(ENTRY).forEach(function(k){ if(ENTRY[k]) g.append(ENTRY[k], vals[k]||''); });
     var done=function(){ document.getElementById('overlay').classList.add('show'); form.reset(); refresh(); };
     if(GFORM_ACTION.indexOf('FORM_ID')===-1){
