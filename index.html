@@ -181,6 +181,123 @@
   .err{color:#c0392b;font-size:13px;margin-top:6px;display:none}
 
   /* CONFIRM */
+  /* COMPACT MODAL RULES */
+.modal {
+  background: #fff;
+  border-radius: 18px;
+  max-width: 460px;
+  width: 100%;
+  padding: 22px 20px;
+  text-align: center;
+  max-height: 92vh;
+  overflow-y: auto;
+}
+
+.modal .check {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e8f7ee;
+  color: var(--ok);
+  display: grid;
+  place-items: center;
+  font-size: 26px;
+  margin: 0 auto 8px;
+}
+
+.modal h3 {
+  font-size: 21px;
+  margin-bottom: 4px;
+}
+
+.modal .modal-sub {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.4;
+  margin-bottom: 6px;
+}
+
+.modal .sum {
+  background: var(--bg);
+  border-radius: 10px;
+  padding: 10px 14px;
+  margin: 8px 0;
+  text-align: left;
+  font-size: 13.5px;
+}
+
+.modal .sum div {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 0;
+}
+
+.modal .sum b {
+  color: var(--blue);
+}
+
+.proof-box {
+  background: #fff7ec;
+  border: 1px solid #ffe1b8;
+  color: #8a5b12;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 12.5px;
+  margin: 8px 0;
+  text-align: left;
+}
+
+/* COMPACT SPAM WARNING */
+/* FIXED SPAM WARNING BOX */
+.spam-warning-box {
+  display: flex;
+  align-items: flex-start; /* Aligns icon perfectly with the top title line */
+  gap: 12px;
+  background-color: #fffbeb;
+  border: 1.5px solid #f59e0b;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+.warning-icon {
+  font-size: 22px;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px; /* Aligns icon directly alongside the heading */
+}
+
+.warning-content {
+  flex: 1;
+}
+
+/* Title Heading */
+.warning-content > strong {
+  display: block;
+  color: #92400e;
+  font-size: 13.5px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 4px; /* Space between title and paragraph */
+}
+
+/* Body Text */
+.warning-content p {
+  color: #78350f;
+  font-size: 12.5px;
+  line-height: 1.5; /* Prevents cramped text overlap */
+  margin: 0;
+}
+
+/* Inline Highlight Words */
+.warning-content p strong {
+  display: inline;
+  color: #92400e;
+  font-weight: 700;
+  margin: 0;
+}
+
   .overlay{position:fixed;inset:0;background:rgba(16,24,58,.6);display:none;place-items:center;z-index:100;padding:20px}
   .overlay.show{display:grid}
   .modal{background:#fff;border-radius:20px;max-width:520px;width:100%;padding:40px 34px;text-align:center}
@@ -423,13 +540,13 @@
 
       <!-- conditional: honor -->
       <div class="cond" id="condHonor">
-        <p style="margin-bottom:10px"><b>📎 One more step for your High Honor discount:</b> after you submit, email a clear photo of your Grade 5 report card (Form 138) to <b style="color:var(--blue)">review@akidz.online</b> — or just reply to our confirmation email with it attached.</p>
+        <p style="margin-bottom:10px"><b>📎 One more step for your High Honor discount:</b> after you submit, email a clear photo of your Grade 5 report card (Form 138) to <b style="color:var(--blue)">akidz2026@gmail.com</b> — or just reply to our confirmation email with it attached.</p>
         <label class="ack"><input type="checkbox" id="ackHonor"> I understand I'll email my Grade 5 report card to confirm this 20% discount.</label>
       </div>
       <!-- conditional: partner -->
       <div class="cond" id="condPartner">
         <div class="field"><label>Name of partner school <span class="rq">*</span></label><input name="partner_school" placeholder="e.g., St. Gertrude School of Novaliches"></div>
-        <p style="margin-bottom:10px"><b>📎 One more step for your Partner School discount:</b> after you submit, email a photo of your school ID or proof of enrollment to <b style="color:var(--blue)">review@akidz.online</b>. Partner-school eligibility is confirmed upon review.</p>
+        <p style="margin-bottom:10px"><b>📎 One more step for your Partner School discount:</b> after you submit, email a photo of your school ID or proof of enrollment to <b style="color:var(--blue)">akidz2026@gmail.com</b>. Partner-school eligibility is confirmed upon review.</p>
         <label class="ack"><input type="checkbox" id="ackPartner"> I understand I'll email my school ID / proof to confirm this 20% discount.</label>
       </div>
       </div>
@@ -471,27 +588,43 @@
         <h4>Contact</h4>
         <p>🌐 akidz.online</p>
         <p>📱 0966 331 6810</p>
-        <p>✉️ review@akidz.online</p>
+        <p>✉️ akidz2026@gmail.com</p>
       </div>
     </div>
     <div class="copy">© 2026 A‑Kidz Review Center &amp; Tutorial Center. All rights reserved.</div>
   </div>
 </footer>
 
-<!-- CONFIRMATION -->
+<!-- CONFIRMATION MODAL -->
 <div class="overlay" id="overlay">
   <div class="modal">
     <div class="check">✓</div>
     <h3>Application received!</h3>
-    <p>Thank you, <b id="cName">parent</b>. We've received <b id="cStudent">your child's</b> enrollment application.</p>
+    <p class="modal-sub">Thank you, <b id="cName">parent</b>. We've received <b id="cStudent">your child's</b>'s application.</p>
+    
     <div class="sum">
       <div><span>Review setup</span><b id="cMode">Face-to-Face</b></div>
       <div><span>Selected rate</span><b id="cDiscount">Opening Promo</b></div>
-      <div><span>Estimated amount to pay</span><b id="cAmount">₱8,000</b></div>
+      <div><span>Estimated fee</span><b id="cAmount">₱8,000</b></div>
     </div>
-    <p>Our team will review your details and email your <b>final amount to pay</b> and payment instructions to <b id="cEmail">your email</b> within 24–48 hours.</p>
-    <p id="proofNote" style="display:none;background:#fff7ec;border:1px solid #ffe1b8;color:#8a5b12;border-radius:10px;padding:12px 14px;font-size:14px;margin-top:6px">📎 Don't forget: email your proof (report card / school ID) to <b>review@akidz.online</b> so we can apply your 20% discount.</p>
-    <button class="btn" style="margin-top:18px" onclick="document.getElementById('overlay').classList.remove('show')">Done</button>
+    
+    <p class="modal-sub">We'll email your payment instructions to <b id="cEmail">your email</b> within 24–48 hours.</p>
+
+    <div id="proofNote" class="proof-box" style="display:none;">
+      📎 <b>Reminder:</b> Reply with your proof (report card / school ID) to <b>akidz2026@gmail.com</b> to confirm your discount.
+    </div>
+
+    <div class="spam-warning-box">
+      <div class="warning-icon">⚠️</div>
+      <div class="warning-content">
+        <strong>Check your Spam or Junk folder!</strong>
+        <p>
+          If you don't see our email in 2–3 minutes, check Spam and select <strong>"Not Spam"</strong> so you receive payment updates.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn done-btn" onclick="document.getElementById('overlay').classList.remove('show')">Done</button>
   </div>
 </div>
 
