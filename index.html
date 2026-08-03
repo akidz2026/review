@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="icon" type="image/png" href="icon.png">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>A-Kidz Review Center — Science High School Specialists</title>
@@ -27,16 +28,55 @@
   .eyebrow{color:var(--orange);font-weight:800;letter-spacing:1.5px;text-transform:uppercase;font-size:13px}
 
   /* NAV */
-  nav{position:sticky;top:0;z-index:50;background:rgba(16,44,174,.97);backdrop-filter:blur(6px)}
-  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
-  .logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:20px;letter-spacing:-.5px}
-  .logo .mark{width:36px;height:36px;border-radius:9px;background:var(--orange);display:grid;place-items:center;color:#fff;font-weight:900;font-size:15px}
-  .navlinks{display:flex;gap:26px;align-items:center}
-  .navlinks a{color:#dfe4ff;font-weight:600;font-size:15px}
-  .navlinks a:hover{color:#fff}
-  .navlinks .btn{padding:9px 20px;font-size:15px}
-  .burger{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer}
-  @media(max-width:820px){.navlinks{display:none}.burger{display:block}}
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  }
+  nav .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 66px;
+  }
+  .logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+  }
+  .navlinks {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+  }
+  .navlinks a {
+    color: var(--ink);
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .navlinks a:hover {
+    color: var(--blue);
+  }
+  .navlinks .btn {
+    padding: 9px 20px;
+    font-size: 15px;
+    color: #fff;
+  }
+  .burger {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--ink);
+    font-size: 26px;
+    cursor: pointer;
+  }
+  @media(max-width:820px) {
+    .navlinks { display: none; }
+    .burger { display: block; }
+  }
 
   /* HERO */
   .hero{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-d) 100%);color:#fff;position:relative;overflow:hidden}
@@ -149,7 +189,9 @@
 
 <nav>
   <div class="wrap">
-    <a href="#top" class="logo"><span class="mark">A‑Z</span> A‑Kidz</a>
+    <a href="#top" class="logo">
+  <img src="logo.png" alt="A-Kidz Review Center">
+    </a>
     <div class="navlinks">
       <a href="#why">Why A‑Kidz</a>
       <a href="#program">Program</a>
@@ -246,10 +288,10 @@
         <a href="#enroll" class="btn">Enroll now</a>
       </div>
       <div class="price">
-        <h3>Honor Student</h3>
+        <h3>With High Honor</h3>
         <div class="srp">₱9,000 SRP</div>
         <div class="amt">₱7,200 <small>20% off</small></div>
-        <div class="req">For Grade 5 honor students. Submit a photo of your Grade 5 report card (Form 138) as proof.</div>
+        <div class="req">For Grade 5 students who achieved a With High Honor average at the end of the school year. Submit a photo of your Grade 5 report card (Form 138) as proof.</div>
         <a href="#enroll" class="btn">Apply with proof</a>
       </div>
       <div class="price">
@@ -351,9 +393,9 @@
           <span class="p">₱8,000</span>
         </label>
         <div style="height:12px"></div>
-        <label class="opt" data-fee="7200" data-label="Honor Student">
-          <input type="radio" name="discount" value="Honor Student">
-          <span class="t">Honor Student — 20% off <small>Requires Grade 5 report card</small></span>
+        <label class="opt" data-fee="7200" data-label="With High Honor">
+          <input type="radio" name="discount" value="With High Honor">
+          <span class="t">With High Honor — 20% off <small>Requires Grade 5 report card showing High Honor average</small></span>
           <span class="p">₱7,200</span>
         </label>
         <div style="height:12px"></div>
@@ -366,7 +408,7 @@
 
       <!-- conditional: honor -->
       <div class="cond" id="condHonor">
-        <p style="margin-bottom:10px"><b>📎 One more step for your Honor discount:</b> after you submit, email a clear photo of your Grade 5 report card (Form 138) to <b style="color:var(--blue)">review@akidz.online</b> — or just reply to our confirmation email with it attached.</p>
+        <p style="margin-bottom:10px"><b>📎 One more step for your High Honor discount:</b> after you submit, email a clear photo of your Grade 5 report card (Form 138) to <b style="color:var(--blue)">review@akidz.online</b> — or just reply to our confirmation email with it attached.</p>
         <label class="ack"><input type="checkbox" id="ackHonor"> I understand I'll email my Grade 5 report card to confirm this 20% discount.</label>
       </div>
       <!-- conditional: partner -->
@@ -382,7 +424,12 @@
         <div class="amt" id="feeDisplay">₱8,000</div>
       </div>
 
-      <div class="field"><label>Message / questions (optional)</label><textarea name="message" rows="3"></textarea></div>
+      <div class="field">
+        <label>How did you hear about us? / Referral person <small style="font-weight:500;color:var(--muted)">(optional)</small></label>
+        <input name="referral" placeholder="e.g., Facebook, Teacher, Friend's Name">
+      </div>
+      
+      <div class="field"><label>Message / questions <small style="font-weight:500;color:var(--muted)">(optional)</small></label><textarea name="message" rows="3"></textarea></div>
       <p class="err" id="formErr">Please complete all required fields for your chosen discount.</p>
       <button type="submit" class="btn" style="width:100%;font-size:17px;padding:16px">Submit Enrollment Application</button>
       <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:12px">By submitting, you agree to be contacted by A‑Kidz Review Center regarding this enrollment.</p>
@@ -457,7 +504,8 @@
     discount:       "entry.352017318",
     partner_school: "entry.737868979",
     amount:         "entry.1450940552", 
-    message:        "entry.1451614822"                 
+    referral:       "entry.87089165", 
+    message:        "entry.1451614822"
   };
   /* ============================================================== */
 
@@ -480,7 +528,7 @@
     else { fee = val==='Opening Promo' ? 8000 : 7200; label=val; }
     feeDisplay.textContent=peso(fee); feeLabel.textContent=label;
     feeAmount.value=fee; discLabel.value=label;
-    condHonor.classList.toggle('show', mode==='Face-to-Face' && val==='Honor Student');
+    condHonor.classList.toggle('show', mode==='Face-to-Face' && val==='With High Honor');
     condPartner.classList.toggle('show', mode==='Face-to-Face' && val==='Partner School');
   }
   opts.forEach(function(o){o.addEventListener('click',function(){o.querySelector('input').checked=true;refresh();});});
@@ -516,7 +564,7 @@
     if(mode==='Online'){ fee=6000; rateLabel='Online (Virtual) — ₱6,000'; }
     else {
       // conditional acknowledgment validation (face-to-face only)
-      if(val==='Honor Student' && !document.getElementById('ackHonor').checked){
+      if(val==='With High Honor' && !document.getElementById('ackHonor').checked){
         errEl.textContent='Please tick the box confirming you will email your Grade 5 report card.'; errEl.style.display='block'; condHonor.scrollIntoView({behavior:'smooth'}); return;
       }
       if(val==='Partner School' && (!form.partner_school.value.trim() || !document.getElementById('ackPartner').checked)){
@@ -541,7 +589,7 @@
       barangay:form.barangay.value, city:form.city.value, region:form.region.value,
       parent_name:form.parent_name.value, mobile:form.mobile.value, email:form.email.value,
       review_mode:mode, discount:(mode==='Online'?'Online (Virtual)':val), amount:String(fee),
-      partner_school:(mode==='Face-to-Face'&&val==='Partner School'?form.partner_school.value:''), message:form.message.value};
+      partner_school:(mode==='Face-to-Face'&&val==='Partner School'?form.partner_school.value:''), referral: form.referral.value,message:form.message.value};
     Object.keys(ENTRY).forEach(function(k){ if(ENTRY[k]) g.append(ENTRY[k], vals[k]||''); });
     var done=function(){ document.getElementById('overlay').classList.add('show'); form.reset(); refresh(); };
     if(GFORM_ACTION.indexOf('FORM_ID')===-1){
