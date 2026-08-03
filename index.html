@@ -74,7 +74,22 @@
     cursor: pointer;
   }
   @media(max-width:820px) {
-    .navlinks { display: none; }
+    .navlinks {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 66px;
+      left: 0;
+      width: 100%;
+      background: #ffffff;
+      padding: 20px;
+      gap: 16px;
+      box-shadow: 0 10px 15px rgba(0,0,0,0.08);
+      border-bottom: 1px solid var(--line);
+    }
+    .navlinks.active {
+      display: flex;
+    }
     .burger { display: block; }
   }
 
@@ -190,15 +205,15 @@
 <nav>
   <div class="wrap">
     <a href="#top" class="logo">
-  <img src="logo.png" alt="A-Kidz Review Center">
+      <img src="logo.png" alt="A-Kidz Review Center">
     </a>
-    <div class="navlinks">
-      <a href="#why">Why A‑Kidz</a>
-      <a href="#program">Program</a>
-      <a href="#pricing">Promos</a>
-      <a href="#enroll" class="btn">Enroll Now</a>
+    <div class="navlinks" id="navlinks">
+      <a href="#why" onclick="toggleMenu()">Why A‑Kidz</a>
+      <a href="#program" onclick="toggleMenu()">Program</a>
+      <a href="#pricing" onclick="toggleMenu()">Promos</a>
+      <a href="#enroll" class="btn" onclick="toggleMenu()">Enroll Now</a>
     </div>
-    <button class="burger" onclick="document.getElementById('enroll').scrollIntoView()">☰</button>
+    <button class="burger" onclick="toggleMenu()">☰</button>
   </div>
 </nav>
 
@@ -481,6 +496,13 @@
 </div>
 
 <script>
+function toggleMenu() {
+  var links = document.getElementById('navlinks');
+  if (links) {
+    links.classList.toggle('active');
+  }
+}
+
 (function(){
   /* ====================== GOOGLE FORM SETUP ====================== */
   var GFORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSeML4gllThOqiwkrFLfTgyLj5dQQau6vRTtWesa2NrA0l1W-A/formResponse";
