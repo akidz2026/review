@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A-Kidz Review Center — Science High School Specialists</title>
+<meta name="description" content="A-Kidz Review Center & Tutorial Center — prepare your child for the Unified Science High School Admissions Test (USHAT). Enroll online.">
+<style>
+  :root{
+    --blue:#102cae; --blue-d:#0b1f80; --orange:#f7941d; --orange-d:#e07d05;
+    --ink:#16183a; --muted:#5b5f7a; --bg:#f4f6fc; --card:#ffffff; --line:#e6e9f5;
+    --ok:#1e8449;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 22px}
+  h1,h2,h3{line-height:1.2;letter-spacing:-.5px}
+  .btn{display:inline-block;background:var(--orange);color:#fff;font-weight:700;padding:14px 26px;border-radius:40px;border:none;cursor:pointer;font-size:16px;transition:.15s;box-shadow:0 6px 18px rgba(247,148,29,.35)}
+  .btn:hover{background:var(--orange-d);transform:translateY(-1px)}
+  .btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.6);box-shadow:none}
+  .btn.ghost:hover{background:rgba(255,255,255,.12)}
+  .eyebrow{color:var(--orange);font-weight:800;letter-spacing:1.5px;text-transform:uppercase;font-size:13px}
+
+  /* NAV */
+  nav{position:sticky;top:0;z-index:50;background:rgba(16,44,174,.97);backdrop-filter:blur(6px)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+  .logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:20px;letter-spacing:-.5px}
+  .logo .mark{width:36px;height:36px;border-radius:9px;background:var(--orange);display:grid;place-items:center;color:#fff;font-weight:900;font-size:15px}
+  .navlinks{display:flex;gap:26px;align-items:center}
+  .navlinks a{color:#dfe4ff;font-weight:600;font-size:15px}
+  .navlinks a:hover{color:#fff}
+  .navlinks .btn{padding:9px 20px;font-size:15px}
+  .burger{display:none;background:none;border:none;color:#fff;font-size:26px;cursor:pointer}
+  @media(max-width:820px){.navlinks{display:none}.burger{display:block}}
+
+  /* HERO */
+  .hero{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-d) 100%);color:#fff;position:relative;overflow:hidden}
+  .hero:after{content:"";position:absolute;right:-140px;top:-120px;width:420px;height:420px;background:radial-gradient(circle,rgba(247,148,29,.35),transparent 62%);border-radius:50%}
+  .hero .wrap{padding:70px 22px 84px;position:relative;z-index:2}
+  .hero h1{font-size:48px;font-weight:800;margin:14px 0 16px;max-width:760px}
+  .hero h1 span{color:var(--orange)}
+  .hero p.lead{font-size:19px;color:#e7ebff;max-width:620px;margin-bottom:14px}
+  .hero .tag{font-style:italic;color:#c8d0ff;margin-bottom:28px}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .badges{display:flex;gap:26px;flex-wrap:wrap;margin-top:40px}
+  .badge b{display:block;font-size:26px;color:var(--orange);font-weight:800}
+  .badge span{font-size:14px;color:#d7ddff}
+  @media(max-width:640px){.hero h1{font-size:34px}}
+
+  section{padding:64px 0}
+  .sec-head{text-align:center;max-width:680px;margin:0 auto 44px}
+  .sec-head h2{font-size:32px;font-weight:800;margin:8px 0}
+  .sec-head p{color:var(--muted);font-size:17px}
+
+  /* FEATURES */
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:820px){.grid3{grid-template-columns:1fr}}
+  .feat{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+  .feat .ic{width:48px;height:48px;border-radius:12px;background:#eef1ff;color:var(--blue);display:grid;place-items:center;font-size:24px;margin-bottom:14px}
+  .feat h3{font-size:19px;margin-bottom:6px}
+  .feat p{color:var(--muted);font-size:15px}
+
+  /* PROGRAM */
+  #program{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .prog{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+  @media(max-width:820px){.prog{grid-template-columns:1fr}}
+  .prog ul{list-style:none;margin-top:14px}
+  .prog li{padding:10px 0 10px 34px;position:relative;border-bottom:1px dashed var(--line);font-size:16px}
+  .prog li:before{content:"✓";position:absolute;left:0;top:9px;width:22px;height:22px;background:var(--orange);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:13px;font-weight:800}
+  .prog .panel{background:linear-gradient(135deg,var(--blue),var(--blue-d));color:#fff;border-radius:18px;padding:30px}
+  .prog .panel h3{font-size:22px;margin-bottom:6px}
+  .subjects{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+  .subjects div{background:rgba(255,255,255,.12);border-radius:10px;padding:12px 14px;font-weight:600;font-size:15px}
+
+  /* PRICING */
+  .prices{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+  @media(max-width:820px){.prices{grid-template-columns:1fr}}
+  .price{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 26px;position:relative;display:flex;flex-direction:column}
+  .price.pop{border:2px solid var(--orange);box-shadow:0 14px 34px rgba(16,44,174,.10)}
+  .price .rib{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--orange);color:#fff;font-size:12px;font-weight:800;letter-spacing:.5px;padding:5px 14px;border-radius:30px;text-transform:uppercase}
+  .price h3{font-size:19px;color:var(--blue)}
+  .price .srp{color:#9aa0bd;text-decoration:line-through;font-size:16px;margin-top:10px}
+  .price .amt{font-size:40px;font-weight:800;color:var(--ink);margin:2px 0 4px}
+  .price .amt small{font-size:16px;color:var(--muted);font-weight:600}
+  .price .req{color:var(--muted);font-size:14px;margin:10px 0 18px;flex:1}
+  .price .btn{width:100%;text-align:center}
+  .note{background:#fff7ec;border:1px solid #ffe1b8;color:#8a5b12;border-radius:12px;padding:14px 16px;font-size:14px;margin-top:22px;text-align:center}
+
+  /* ENROLL */
+  #enroll{background:#fff;border-top:1px solid var(--line)}
+  .paybar{background:#eef1ff;border:1px solid #d7ddff;color:var(--blue-d);border-radius:14px;padding:16px 20px;font-size:15px;margin-bottom:28px;display:flex;gap:12px;align-items:flex-start}
+  .paybar b{color:var(--blue)}
+  form{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;max-width:820px;margin:0 auto}
+  .frow{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:640px){.frow{grid-template-columns:1fr}}
+  .field{margin-bottom:18px}
+  label{display:block;font-weight:700;font-size:14px;margin-bottom:6px}
+  label .rq{color:var(--orange)}
+  input,select,textarea{width:100%;padding:12px 14px;border:1.6px solid var(--line);border-radius:10px;font-size:15px;font-family:inherit;background:#fbfcff}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--blue)}
+  input[type=file]{padding:9px;background:#fff}
+  .opt{border:1.6px solid var(--line);border-radius:12px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;cursor:pointer;transition:.12s}
+  .opt:hover{border-color:var(--blue)}
+  .opt.sel{border-color:var(--orange);background:#fff7ec}
+  .opt input{width:auto;margin-top:3px}
+  .opt .t{font-weight:700}
+  .opt .p{margin-left:auto;font-weight:800;color:var(--blue);white-space:nowrap}
+  .opt small{display:block;color:var(--muted);font-weight:500}
+  .cond{display:none;margin-top:6px;background:#fbfcff;border:1px dashed var(--line);border-radius:12px;padding:16px}
+  .cond.show{display:block}
+  .ack{display:flex;gap:9px;align-items:flex-start;font-weight:600;font-size:14px;color:var(--ink);cursor:pointer}
+  .ack input{width:auto;margin-top:3px}
+  .feebox{background:linear-gradient(135deg,var(--blue),var(--blue-d));color:#fff;border-radius:14px;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;margin:22px 0}
+  .feebox .amt{font-size:30px;font-weight:800;color:var(--orange)}
+  .hp{position:absolute;left:-9999px}
+  .err{color:#c0392b;font-size:13px;margin-top:6px;display:none}
+
+  /* CONFIRM */
+  .overlay{position:fixed;inset:0;background:rgba(16,24,58,.6);display:none;place-items:center;z-index:100;padding:20px}
+  .overlay.show{display:grid}
+  .modal{background:#fff;border-radius:20px;max-width:520px;width:100%;padding:40px 34px;text-align:center}
+  .modal .check{width:74px;height:74px;border-radius:50%;background:#e8f7ee;color:var(--ok);display:grid;place-items:center;font-size:38px;margin:0 auto 16px}
+  .modal h3{font-size:26px;margin-bottom:10px}
+  .modal p{color:var(--muted);margin-bottom:8px}
+  .modal .sum{background:var(--bg);border-radius:12px;padding:16px;margin:18px 0;text-align:left;font-size:15px}
+  .modal .sum div{display:flex;justify-content:space-between;padding:4px 0}
+  .modal .sum b{color:var(--blue)}
+
+  footer{background:var(--blue-d);color:#cfd6ff;padding:46px 0 26px}
+  footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:30px}
+  @media(max-width:720px){footer .cols{grid-template-columns:1fr}}
+  footer h4{color:#fff;margin-bottom:12px;font-size:16px}
+  footer a{color:#cfd6ff}footer a:hover{color:#fff}
+  .tags{color:#8ea0ff;font-size:13px;margin-top:10px}
+  .copy{border-top:1px solid rgba(255,255,255,.15);margin-top:30px;padding-top:18px;font-size:13px;color:#8ea0ff;text-align:center}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo"><span class="mark">A‑Z</span> A‑Kidz</a>
+    <div class="navlinks">
+      <a href="#why">Why A‑Kidz</a>
+      <a href="#program">Program</a>
+      <a href="#pricing">Promos</a>
+      <a href="#enroll" class="btn">Enroll Now</a>
+    </div>
+    <button class="burger" onclick="document.getElementById('enroll').scrollIntoView()">☰</button>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div class="eyebrow">Science High School Specialists</div>
+    <h1>Take your best shot at the <span>USHAT.</span></h1>
+    <p class="lead">A‑Kidz Review Center &amp; Tutorial Center prepares Grade&nbsp;6 pupils to ace the Unified Science High School Admissions Test — powered by fresh minds from the country's premier universities.</p>
+    <p class="tag">"Everything you need to learn, from A to Z."</p>
+    <div class="cta">
+      <a href="#enroll" class="btn">Enroll your child</a>
+      <a href="#program" class="btn ghost">See the program</a>
+    </div>
+    <div class="badges">
+      <div class="badge"><b>4</b><span>Core subjects</span></div>
+      <div class="badge"><b>10</b><span>Saturday sessions</span></div>
+      <div class="badge"><b>₱8,000</b><span>Opening promo</span></div>
+    </div>
+  </div>
+</header>
+
+<!-- WHY -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Why A‑Kidz</div>
+      <h2>Built by science-high graduates, for future ones</h2>
+      <p>Our instructors are products of the country's top universities and actual graduates of science high schools — they know exactly what it takes to pass.</p>
+    </div>
+    <div class="grid3">
+      <div class="feat"><div class="ic">🎓</div><h3>Elite instructors</h3><p>Reviewers from premier universities who've walked the science-high path themselves.</p></div>
+      <div class="feat"><div class="ic">🧠</div><h3>Exam-focused method</h3><p>A flipped review model — practice at home, then master every item together in session.</p></div>
+      <div class="feat"><div class="ic">📈</div><h3>Real progress</h3><p>A diagnostic exam at the start and a full mock test at the end track your child's growth.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM -->
+<section id="program">
+  <div class="wrap">
+    <div class="prog">
+      <div>
+        <div class="eyebrow">The Program</div>
+        <h2 style="font-size:30px;margin:8px 0">A complete Grade 6 entrance review</h2>
+        <p style="color:var(--muted)">Ten Saturdays of focused, all-subject preparation for the USHAT.</p>
+        <ul>
+          <li><b>Schedule:</b> 10 Saturdays, October 3 – December 5, 2026</li>
+          <li><b>Daily hours:</b> 8:00 AM – 5:00 PM</li>
+          <li><b>Format:</b> Diagnostic exam, 8 review sessions, and a final mock test</li>
+          <li><b>Materials:</b> Reference manual + weekly practice exams included</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Four subjects, every Saturday</h3>
+        <p style="color:#d7ddff;font-size:15px">Complete coverage of the USHAT scope.</p>
+        <div class="subjects">
+          <div>➗ Mathematics</div>
+          <div>📖 Languages (Eng &amp; Fil)</div>
+          <div>🔬 Science</div>
+          <div>🧩 Abstract Reasoning</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Promos &amp; Bundles</div>
+      <h2>Opening rates for our first batch</h2>
+      <p>Suggested rate is ₱9,000 — but every enrollee saves during our opening promo. Bigger discounts apply with proof.</p>
+    </div>
+    <div class="prices">
+      <div class="price pop">
+        <div class="rib">Everyone gets this</div>
+        <h3>Opening Promo</h3>
+        <div class="srp">₱9,000 SRP</div>
+        <div class="amt">₱8,000</div>
+        <div class="req">Automatic opening discount for every enrollee. No requirements — just register.</div>
+        <a href="#enroll" class="btn">Enroll now</a>
+      </div>
+      <div class="price">
+        <h3>Honor Student</h3>
+        <div class="srp">₱9,000 SRP</div>
+        <div class="amt">₱7,200 <small>20% off</small></div>
+        <div class="req">For Grade 5 honor students. Submit a photo of your Grade 5 report card (Form 138) as proof.</div>
+        <a href="#enroll" class="btn">Apply with proof</a>
+      </div>
+      <div class="price">
+        <h3>Partner School</h3>
+        <div class="srp">₱9,000 SRP</div>
+        <div class="amt">₱7,200 <small>20% off</small></div>
+        <div class="req">For students of partner schools. Email your school ID or proof of enrollment.</div>
+        <a href="#enroll" class="btn">Apply with proof</a>
+      </div>
+    </div>
+    <div class="note">⚠️ The Honor Student and Partner School discounts <b>cannot be combined</b> — you may choose only one 20%‑off discount.</div>
+  </div>
+</section>
+
+<!-- ENROLL -->
+<section id="enroll">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">Enrollment</div>
+      <h2>Register your child</h2>
+      <p>Fill out the form below. We'll review your application and email you the exact amount to pay.</p>
+    </div>
+
+    <div class="paybar" style="max-width:820px;margin:0 auto 22px">
+      <span style="font-size:20px">✉️</span>
+      <div><b>No online payment needed here.</b> Once we confirm your application and requirements, we'll email you your <b>final amount to pay</b> (with your discount applied) and the payment instructions. Please make sure your email address below is correct.</div>
+    </div>
+
+    <form id="enrollForm" autocomplete="on">
+      <input type="hidden" name="fee_amount" id="fee_amount" value="8000">
+      <input type="hidden" name="discount_label" id="discount_label" value="Opening Promo">
+
+      <h3 style="color:var(--blue);margin-bottom:14px">1. Student Information</h3>
+      <div class="frow">
+        <div class="field"><label>Student's full name <span class="rq">*</span></label><input name="student_name" required></div>
+        <div class="field"><label>Current grade level <span class="rq">*</span></label>
+          <select name="grade_level" required><option value="">Select…</option><option>Grade 6</option><option>Grade 5</option><option>Other</option></select></div>
+      </div>
+      <div class="frow">
+        <div class="field"><label>Current school <span class="rq">*</span></label><input name="current_school" required></div>
+        <div class="field"><label>Gender</label><select name="gender"><option value="">Prefer not to say</option><option>Female</option><option>Male</option></select></div>
+      </div>
+
+      <h3 style="color:var(--blue);margin:22px 0 14px">2. Parent / Guardian</h3>
+      <div class="frow">
+        <div class="field"><label>Parent / guardian name <span class="rq">*</span></label><input name="parent_name" required></div>
+        <div class="field"><label>Mobile number <span class="rq">*</span></label><input name="mobile" type="tel" placeholder="09XXXXXXXXX" required></div>
+      </div>
+      <div class="field"><label>Email address <span class="rq">*</span> <small style="font-weight:500;color:var(--muted)">— this is where we'll send your amount to pay</small></label><input name="email" type="email" required></div>
+
+      <h3 style="color:var(--blue);margin:22px 0 14px">3. Choose Your Rate</h3>
+      <div class="field" id="optWrap">
+        <label class="opt sel" data-fee="8000" data-label="Opening Promo">
+          <input type="radio" name="discount" value="Opening Promo" checked>
+          <span class="t">Opening Promo <small>Automatic — no requirements</small></span>
+          <span class="p">₱8,000</span>
+        </label>
+        <div style="height:12px"></div>
+        <label class="opt" data-fee="7200" data-label="Honor Student">
+          <input type="radio" name="discount" value="Honor Student">
+          <span class="t">Honor Student — 20% off <small>Requires Grade 5 report card</small></span>
+          <span class="p">₱7,200</span>
+        </label>
+        <div style="height:12px"></div>
+        <label class="opt" data-fee="7200" data-label="Partner School">
+          <input type="radio" name="discount" value="Partner School">
+          <span class="t">Partner School — 20% off <small>Requires school ID / proof</small></span>
+          <span class="p">₱7,200</span>
+        </label>
+      </div>
+
+      <!-- conditional: honor -->
+      <div class="cond" id="condHonor">
+        <p style="margin-bottom:10px"><b>📎 One more step for your Honor discount:</b> after you submit, email a clear photo of your Grade 5 report card (Form 138) to <b style="color:var(--blue)">review@akidz.online</b> — or just reply to our confirmation email with it attached.</p>
+        <label class="ack"><input type="checkbox" id="ackHonor"> I understand I'll email my Grade 5 report card to confirm this 20% discount.</label>
+      </div>
+      <!-- conditional: partner -->
+      <div class="cond" id="condPartner">
+        <div class="field"><label>Name of partner school <span class="rq">*</span></label><input name="partner_school" placeholder="e.g., St. Gertrude School of Novaliches"></div>
+        <p style="margin-bottom:10px"><b>📎 One more step for your Partner School discount:</b> after you submit, email a photo of your school ID or proof of enrollment to <b style="color:var(--blue)">review@akidz.online</b>. Partner-school eligibility is confirmed upon review.</p>
+        <label class="ack"><input type="checkbox" id="ackPartner"> I understand I'll email my school ID / proof to confirm this 20% discount.</label>
+      </div>
+
+      <div class="feebox">
+        <div><div style="font-size:13px;color:#c8d0ff">Estimated amount to pay</div><div style="font-size:13px;color:#c8d0ff" id="feeLabel">Opening Promo</div></div>
+        <div class="amt" id="feeDisplay">₱8,000</div>
+      </div>
+
+      <div class="field"><label>Message / questions (optional)</label><textarea name="message" rows="3"></textarea></div>
+      <p class="err" id="formErr">Please complete all required fields for your chosen discount.</p>
+      <button type="submit" class="btn" style="width:100%;font-size:17px;padding:16px">Submit Enrollment Application</button>
+      <p style="text-align:center;color:var(--muted);font-size:13px;margin-top:12px">By submitting, you agree to be contacted by A‑Kidz Review Center regarding this enrollment.</p>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="logo" style="margin-bottom:10px"><span class="mark">A‑Z</span> A‑Kidz Review Center</div>
+        <p style="font-size:14px">Science High School Specialists.<br>Everything you need to learn, from A to Z.</p>
+        <div class="tags">#WeAreAKidz · #ScienceHighSchoolSpecialists · #TakeYourBestShot · #USHAT</div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <p><a href="#why">Why A‑Kidz</a></p>
+        <p><a href="#program">Program</a></p>
+        <p><a href="#pricing">Promos &amp; Bundles</a></p>
+        <p><a href="#enroll">Enroll Now</a></p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>🌐 akidz.online</p>
+        <p>📱 0966 331 6810</p>
+        <p>✉️ review@akidz.online</p>
+      </div>
+    </div>
+    <div class="copy">© 2026 A‑Kidz Review Center &amp; Tutorial Center. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- CONFIRMATION -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <div class="check">✓</div>
+    <h3>Application received!</h3>
+    <p>Thank you, <b id="cName">parent</b>. We've received <b id="cStudent">your child's</b> enrollment application.</p>
+    <div class="sum">
+      <div><span>Selected rate</span><b id="cDiscount">Opening Promo</b></div>
+      <div><span>Estimated amount to pay</span><b id="cAmount">₱8,000</b></div>
+    </div>
+    <p>Our team will review your details and email your <b>final amount to pay</b> and payment instructions to <b id="cEmail">your email</b> within 24–48 hours.</p>
+    <p id="proofNote" style="display:none;background:#fff7ec;border:1px solid #ffe1b8;color:#8a5b12;border-radius:10px;padding:12px 14px;font-size:14px;margin-top:6px">📎 Don't forget: email your proof (report card / school ID) to <b>review@akidz.online</b> so we can apply your 20% discount.</p>
+    <button class="btn" style="margin-top:18px" onclick="document.getElementById('overlay').classList.remove('show')">Done</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  /* ====================== GOOGLE FORM SETUP ======================
+     1. Create a Google Form with these questions (short answer / paragraph):
+        Student name, Grade level, Current school, Gender, Parent name,
+        Mobile, Email, Discount chosen, Amount, Partner school, Message.
+     2. Click the 3-dots -> "Get pre-filled link", fill dummy values, copy link.
+        Each field shows as entry.1234567 — paste those IDs below.
+     3. Replace FORM_ID in GFORM_ACTION with your form's ID (from its edit URL:
+        docs.google.com/forms/d/e/FORM_ID/viewform).
+     Responses land in your linked Google Sheet automatically. Proof photos
+     come in by email to review@akidz.online (see the discount steps on-page). */
+  var GFORM_ACTION="https://docs.google.com/forms/d/e/FORM_ID/formResponse";
+  var ENTRY={
+    student_name:  "entry.1000001",
+    grade_level:   "entry.1000002",
+    current_school:"entry.1000003",
+    gender:        "entry.1000004",
+    parent_name:   "entry.1000005",
+    mobile:        "entry.1000006",
+    email:         "entry.1000007",
+    discount:      "entry.1000008",
+    amount:        "entry.1000009",
+    partner_school:"entry.1000010",
+    message:       "entry.1000011"
+  };
+  /* ============================================================== */
+
+  var opts=document.querySelectorAll('#optWrap .opt');
+  var condHonor=document.getElementById('condHonor');
+  var condPartner=document.getElementById('condPartner');
+  var feeDisplay=document.getElementById('feeDisplay');
+  var feeLabel=document.getElementById('feeLabel');
+  var feeAmount=document.getElementById('fee_amount');
+  var discLabel=document.getElementById('discount_label');
+  var peso=function(n){return '₱'+Number(n).toLocaleString('en-PH');};
+
+  function refresh(){
+    var checked=document.querySelector('input[name=discount]:checked');
+    var val=checked?checked.value:'Opening Promo';
+    opts.forEach(function(o){o.classList.toggle('sel', o.querySelector('input').checked);});
+    var fee = val==='Opening Promo' ? 8000 : 7200;
+    feeDisplay.textContent=peso(fee); feeLabel.textContent=val;
+    feeAmount.value=fee; discLabel.value=val;
+    condHonor.classList.toggle('show', val==='Honor Student');
+    condPartner.classList.toggle('show', val==='Partner School');
+  }
+  opts.forEach(function(o){o.addEventListener('click',function(){o.querySelector('input').checked=true;refresh();});});
+  document.querySelectorAll('input[name=discount]').forEach(function(r){r.addEventListener('change',refresh);});
+  refresh();
+
+  var form=document.getElementById('enrollForm');
+  var errEl=document.getElementById('formErr');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    errEl.style.display='none';
+    if(!form.checkValidity()){ form.reportValidity(); return; }
+    var val=document.querySelector('input[name=discount]:checked').value;
+    // conditional acknowledgment validation
+    if(val==='Honor Student' && !document.getElementById('ackHonor').checked){
+      errEl.textContent='Please tick the box confirming you will email your Grade 5 report card.'; errEl.style.display='block'; condHonor.scrollIntoView({behavior:'smooth'}); return;
+    }
+    if(val==='Partner School'){
+      if(!form.partner_school.value.trim() || !document.getElementById('ackPartner').checked){
+        errEl.textContent='Please enter your partner school and tick the box confirming you will email your proof.'; errEl.style.display='block'; condPartner.scrollIntoView({behavior:'smooth'}); return;
+      }
+    }
+    var fee = val==='Opening Promo' ? 8000 : 7200;
+    // fill confirmation
+    document.getElementById('cName').textContent=form.parent_name.value||'parent';
+    document.getElementById('cStudent').textContent=form.student_name.value||'your child';
+    document.getElementById('cDiscount').textContent=val;
+    document.getElementById('cAmount').textContent=peso(fee);
+    document.getElementById('cEmail').textContent=form.email.value||'your email';
+    var needProof=(val!=='Opening Promo');
+    document.getElementById('proofNote').style.display = needProof ? 'block' : 'none';
+    // build Google Form submission (keeps this custom design)
+    var g=new URLSearchParams();
+    var vals={student_name:form.student_name.value, grade_level:form.grade_level.value,
+      current_school:form.current_school.value, gender:form.gender.value,
+      parent_name:form.parent_name.value, mobile:form.mobile.value, email:form.email.value,
+      discount:val, amount:String(fee),
+      partner_school:(val==='Partner School'?form.partner_school.value:''), message:form.message.value};
+    Object.keys(ENTRY).forEach(function(k){ if(ENTRY[k]) g.append(ENTRY[k], vals[k]||''); });
+    var done=function(){ document.getElementById('overlay').classList.add('show'); form.reset(); refresh(); };
+    if(GFORM_ACTION.indexOf('FORM_ID')===-1){
+      fetch(GFORM_ACTION,{method:'POST',mode:'no-cors',body:g}).catch(function(){}).finally(done);
+    } else { done(); } // not yet configured — still shows confirmation (preview mode)
+  });
+})();
+</script>
+</body>
+</html>
